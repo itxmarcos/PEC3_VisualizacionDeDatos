@@ -51,7 +51,6 @@ def chart_general():
 def map_general():
     fig = px.choropleth(df, locations='iso_alpha', color='life_exp', hover_name='country', 
                         animation_frame='year', color_continuous_scale=px.colors.sequential.Plasma, projection='natural earth')
-    fig.update_layout(title="Life Expectancy over time")
     st.plotly_chart(fig, use_container_width=True)
 
 def chart_spain_pop():
